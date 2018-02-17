@@ -1,1 +1,141 @@
 // Core SASS file
+// Variables
+
+// Placeholders
+%serifFont{
+  font-family: "Playfair Display SC", serif;
+  color: #ffffff;
+}
+
+%sansSerifFont{
+  font-family: "Barlow Condensed", serif;
+  color: #ffffff;
+}
+
+// Targets
+body{
+  background-color: #004024;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+// Classes
+.siteContent{
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  background:{
+    image: url("imgs/sailboatInFrontOfIsland.jpg");
+    // position: 0px 200px;
+  }
+}
+
+.underBanner{
+  height: 90%;
+  width: 100%;
+  box-sizing: border-box;
+  // background-color: red;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navBar{
+  height: 50%;
+  width: 10%;
+  margin: 2px 1px 2px 2px;
+  border-radius: 5px;
+  background: {
+    color: rgba(0,0,0,.7)
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.navSpacer{
+  height: 15px;
+  width: 100%;
+}
+
+.navButton{
+  height: 40px;
+  width: 100%;
+  margin:2px 0px;
+  background-color: rgba(0,0,0,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 0px #ffffff;
+  box-shadow: inset 0px 0px 0px #000000;
+  transition: .5s;
+
+  &:hover{
+    background-color: rgba(0,0,0,.7);
+    text-shadow: 2px 2px 5px #ffffff;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,1);
+    transition: .5s;
+  }
+
+  p{
+    @extend %serifFont;
+  }
+}
+
+.pageContent{
+  height: 100%;
+  width: 90%;
+  margin: 2px 2px 1px 2px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 5px;
+
+  background: {
+    color: rgba(0,0,0,.8)
+  }
+
+  h1{
+    @extend %serifFont;
+    font-size: 2.5em;
+    text-decoration: underline;
+  }
+
+  p{
+    @extend %sansSerifFont;
+    font-size: 1.5em;
+  }
+}
+
+// ID's
+#banner{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  p{
+    @extend %serifFont;
+    font-size: 3.5em;
+    text-shadow: 5px 5px 10px #000000;
+  }
+}
+
+#heroImage{
+  height: 400px;
+  width: 600px;
+  border-radius: 5px;
+  background:{
+    image: url("imgs/reggaeUnderSail.jpg");
+    size: 600px 400px;
+    position: cover;
+  }
+}
