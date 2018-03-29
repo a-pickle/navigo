@@ -25,16 +25,21 @@ $navBarHeight:  80px;
 
   &:hover{
     .navBarMenu{
+      transform: rotateX(0deg);
       display: block;
       transition: .5s;
     }
   }
 
   .navBarMenu{
+    position: absolute;
+    top: $navBarHeight;
+    transform: rotateX(90deg);
+    transform-origin: top;
     background-color: rgba(48, 59, 65, .8);
     padding: 0px 0px 10px 0px;
     box-sizing: border-box;
-    display: none;
+    display: block;
     transition: .5s;
 
     ul{
@@ -49,6 +54,7 @@ $navBarHeight:  80px;
 #navBar{
   height: $navBarHeight;
   width: 100%;
+  position: relative;
   background-color: #303B41;
   font-size: 2em;
   color: white;
@@ -104,16 +110,4 @@ $navBarHeight:  80px;
     justify-content: space-between;
     align-items: center;
   }
-}
-
-#membersMenu{
-  position: absolute;
-  top: $navBarHeight;
-  // left: 66vw;
-}
-
-#aboutMenu{
-  position: absolute;
-  top: $navBarHeight;
-  // left: 78vw;
 }

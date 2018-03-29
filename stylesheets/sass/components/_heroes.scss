@@ -1,4 +1,16 @@
-// Classes
+  // Placeholders
+%heroBackgrounds{
+  background-position: center;
+  background-size: cover;
+}
+
+%heroSlide{
+  animation-duration: .66s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+  // Classes
 .heroContainer{
   height: 399px;
   width: 100%;
@@ -11,11 +23,12 @@
 
   .heroImage{
     height: 100%;
-    width: 600px;
+    width: 60%;
     // position: relative;
   }
 
   .heroTextContainer{
+    background-color: white;
     width: 384px;
     padding: 0px 40px;
     text-align: left;
@@ -39,18 +52,49 @@
   // ID's
 #scenery{
   background: url('imgs/scenery600px.jpg');
-  background-position: center;
-  background-size: cover;
+  @extend %heroBackgrounds;
 }
 
 #beach{
   background: url('imgs/beach600px.jpg');
-  background-position: center;
-  background-size: cover;
+  @extend %heroBackgrounds;
 }
 
 #moorings{
   background: url('imgs/moorings600px.jpg');
-  background-position: center;
-  background-size: cover;
+  @extend %heroBackgrounds;
+}
+
+#sceneryContainer{
+  animation-name: heroSlideLeft;
+  @extend %heroSlide;
+}
+
+#beachContainer{
+  animation-name: heroSlideRight;
+  @extend %heroSlide;
+}
+
+#mooringsContainer{
+  animation-name: heroSlideLeft;
+  @extend %heroSlide;
+}
+
+  // Animations
+@keyframes heroSlideLeft{
+  0%{
+    transform: translateX(500%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes heroSlideRight{
+  0%{
+    transform: translateX(-500%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
 }
