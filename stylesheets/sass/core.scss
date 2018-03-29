@@ -1,11 +1,8 @@
 // Core SASS code
-// Imported Partials
+  // Reset Partial
 @import 'components/reset';
-@import 'components/textstyling';
-@import 'components/navbar';
-@import 'components/heroes';
 
-// Elements
+  // Elements
 a{
   text-decoration: none;
 }
@@ -17,9 +14,14 @@ body{
   justify-content: center;
 }
 
-// Classes
+  // Imported Partials
+@import 'components/textstyling';
+@import 'components/navbar';
+@import 'components/heroes';
 
-// ID's
+  // Classes
+
+  // ID's
 #siteContainer{
   width: 1024px;
   background-color: #ffffff;
