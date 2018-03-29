@@ -2,14 +2,17 @@
 .heroContainer{
   height: 399px;
   width: 100%;
+  // position: relative;
+  // margin: auto 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 
-  img{
+  .heroImage{
     height: 100%;
     width: 600px;
+    // position: relative;
   }
 
   .heroTextContainer{
@@ -25,10 +28,29 @@
       font-weight: 700;
     }
 
-    span{
+    p{
       font-size: 2em;
       font-family: Barlow, sans-serif;
       font-weight: 300;
     }
   }
+}
+
+  // ID's
+#scenery{
+  background: url('imgs/scenery600px.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#beach{
+  background: url('imgs/beach600px.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#moorings{
+  background: url('imgs/moorings600px.jpg');
+  background-position: center;
+  background-size: cover;
 }

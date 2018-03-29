@@ -103,18 +103,24 @@ body {
   #navBar #navBarLogo {
     display: flex;
     align-items: center;
-    color: white; }
+    color: white;
+    transition: .5s; }
+    #navBar #navBarLogo:hover {
+      color: #0BBCCB;
+      transition: .5s; }
+      #navBar #navBarLogo:hover svg g g {
+        fill: #0BBCCB;
+        transition: .5s; }
   #navBar #logo {
     height: 70px;
     width: 70px;
-    margin-right: 5px;
-    background-image: url("imgs/logoWhite.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; }
+    margin-right: 5px; }
+    #navBar #logo svg g g {
+      fill: white;
+      transition: .5s; }
   #navBar #navBarOptions {
     height: 100%;
-    width: 55%;
+    width: 45%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -122,24 +128,26 @@ body {
 
 #membersMenu {
   position: absolute;
-  top: 80px;
-  left: 66vw; }
+  top: 80px; }
 
 #aboutMenu {
   position: absolute;
-  top: 80px;
-  left: 78vw; }
+  top: 80px; }
 
 .heroContainer {
   height: 399px;
   width: 100%;
+  position: relative;
+  margin: auto 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center; }
-  .heroContainer img {
-    height: 100%;
-    width: 600px; }
+  .heroContainer .heroImage {
+    height: 399px;
+    width: 600px;
+    position: relative;
+    background-color: #ff0000; }
   .heroContainer .heroTextContainer {
     width: 384px;
     padding: 0px 40px;
@@ -154,6 +162,21 @@ body {
       font-size: 2em;
       font-family: Barlow, sans-serif;
       font-weight: 300; }
+
+#scenery background {
+  image: url("imgs/scenery.jpg");
+  position: center;
+  size: cover; }
+
+#beach background {
+  image: url("imgs/beach.jpg");
+  position: center;
+  size: cover; }
+
+#moorings background {
+  image: url("imgs/moorings.jpg");
+  position: center;
+  size: cover; }
 
 #siteContainer {
   width: 1024px;
