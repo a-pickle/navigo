@@ -1,7 +1,4 @@
 *.DS_Store
 *.codekit3
-<<<<<<< HEAD
 mockup/
-=======
-/mockup
->>>>>>> develop
+prepros*
